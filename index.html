@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e8">
+  <meta name="description" content="Monologues of my existence — a personal archive of thoughts, stories, and essays.">
+  <title>Monologues of my existence</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Monologues of my existence home">
+      <span class="brand-mark">M<span>·</span>E</span>
+      <span class="brand-name">Monologues <i>of my existence</i></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span>
+    </button>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a class="nav-link active" href="#top">Home</a>
+      <a class="nav-link" href="#library">The library</a>
+      <details class="nav-library" id="navLibrary">
+        <summary>Read a monologue <span class="chevron">⌄</span></summary>
+        <div class="nav-library-panel" id="navBlogList">
+          <p class="nav-empty">Your published blogs will appear here.</p>
+        </div>
+      </details>
+      <a class="nav-link" href="#about">About</a>
+    </nav>
+    <a class="header-note" href="#library"><span class="note-dot"></span> A living archive</a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" aria-labelledby="heroTitle">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> NOTES FROM WITHIN <span class="eyebrow-star">✳</span></p>
+        <h1 id="heroTitle">Monologues<br><em>of my</em> <span class="serif-italic">existence</span><span class="title-period">.</span></h1>
+        <p class="hero-description">A home for the thoughts that stay a little longer. Stories, reflections, and fragments of a life, collected one page at a time.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#library">Explore the writing <span aria-hidden="true">↗</span></a>
+          <span class="hero-aside">Words, without a deadline.</span>
+        </div>
+        <div class="hero-footnote"><span>EST. WITH A THOUGHT</span><span class="footnote-rule"></span><span>ALWAYS IN PROGRESS</span></div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Abstract illustration of an open journal and handwritten thoughts" role="img">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-spark spark-one">✳</div>
+        <div class="art-spark spark-two">✴</div>
+        <div class="art-caption caption-top">VOL. 01 <span>—</span> THE INNER EDITION</div>
+        <div class="paper-shadow"></div>
+        <div class="journal-book">
+          <div class="journal-page page-left">
+            <span class="page-kicker">A NOTE TO SELF</span>
+            <span class="page-scribble scribble-a"></span>
+            <span class="page-scribble scribble-b"></span>
+            <span class="page-scribble scribble-c"></span>
+            <span class="page-scribble scribble-d"></span>
+            <span class="page-number">01</span>
+          </div>
+          <div class="journal-page page-right">
+            <span class="page-kicker">SOMEWHERE BETWEEN</span>
+            <span class="page-quote">“There is a story<br>in every silence.”</span>
+            <span class="page-signature">— the unfinished self</span>
+            <span class="page-number">02</span>
+          </div>
+          <div class="book-spine"></div>
+        </div>
+        <div class="art-caption caption-bottom"><span class="caption-star">✳</span> THOUGHTS MADE TANGIBLE</div>
+        <div class="floating-tag">a little<br><i>more human</i></div>
+      </div>
+      <a class="scroll-cue" href="#library" aria-label="Scroll to the library"><span class="scroll-cue-line"></span> SCROLL TO WANDER</a>
+    </section>
+
+    <section class="ticker" aria-label="A collection of words">
+      <div class="ticker-track" aria-hidden="true">
+        <span>THOUGHTS</span><b>✳</b><span>MEMORIES</span><b>✳</b><span>OBSERVATIONS</span><b>✳</b><span>UNTOLD STORIES</span><b>✳</b><span>THOUGHTS</span><b>✳</b><span>MEMORIES</span><b>✳</b><span>OBSERVATIONS</span><b>✳</b><span>UNTOLD STORIES</span><b>✳</b>
+      </div>
+    </section>
+
+    <section class="library-section section-wrap" id="library" aria-labelledby="libraryTitle">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> THE COLLECTION</p>
+          <h2 id="libraryTitle">The <em>library</em><span class="title-period">.</span></h2>
+        </div>
+        <p class="section-intro">Every post is a page from somewhere in the mind. Pick one, open it, and stay awhile.</p>
+      </div>
+
+      <div class="library-toolbar reveal" id="libraryToolbar" hidden>
+        <label class="search-box">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Find a thought..." aria-label="Search blogs by title or description">
+          <kbd>/</kbd>
+        </label>
+        <div class="filter-wrap">
+          <label class="sr-only" for="categoryFilter">Filter by category</label>
+          <select id="categoryFilter"><option value="all">All writings</option></select>
+        </div>
+        <p class="result-count" id="resultCount" aria-live="polite"></p>
+      </div>
+
+      <div class="blog-grid" id="blogGrid" aria-live="polite">
+        <div class="loading-state"><span class="loader"></span><span>Gathering the pages...</span></div>
+      </div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-illustration" aria-hidden="true"><span>✳</span><div class="empty-page"></div></div>
+        <p class="eyebrow">A SPACE WAITING FOR WORDS</p>
+        <h3>Your first monologue<br><em>starts here.</em></h3>
+        <p class="empty-copy">Your blog PDFs will live here as beautiful, clickable covers. Add your first post to turn this quiet shelf into a library.</p>
+        <a class="text-link" href="#about">How to publish a post <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="library-bottom-note"><span class="bottom-note-line"></span><span>READ AT YOUR OWN PACE</span><span class="bottom-note-line"></span></div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-inner section-wrap">
+        <div class="about-symbol reveal"><span class="symbol-ring"></span><span class="symbol-letter">m.</span><span class="symbol-star">✳</span></div>
+        <div class="about-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A SMALL INTRODUCTION</p>
+          <h2>Not everything<br>needs an <em>audience.</em><br>But some things<br>deserve a <span class="highlight-word">page.</span></h2>
+          <p>This is a personal corner of the internet for ideas, questions, experiences, and the occasional beautifully random thought. No fixed genre. No perfect endings. Just honest words, gathered here.</p>
+          <div class="signature">— the voice behind the pages</div>
+        </div>
+        <div class="publish-note reveal">
+          <span class="publish-index">A NOTE FOR THE AUTHOR</span>
+          <span class="publish-icon">↗</span>
+          <h3>Have a new<br>page to add?</h3>
+          <p>Drop your PDF and its cover into the project, add a small entry to the blog list, and your new post will find its place here.</p>
+          <a href="README.md" class="text-link" target="_blank" rel="noopener">Publishing guide <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top section-wrap">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark">M<span>·</span>E</span><span class="brand-name">Monologues <i>of my existence</i></span></a>
+      <p>Made of moments, held together by words.</p>
+      <a class="back-top" href="#top">BACK TO TOP ↑</a>
+    </div>
+    <div class="footer-bottom section-wrap"><span>© <span id="year"></span> MONOLOGUES OF MY EXISTENCE</span><span>AN OPEN JOURNAL · ALWAYS EVOLVING</span></div>
+  </footer>
+
+  <noscript><div class="noscript-message">Please enable JavaScript to browse the blog collection. The PDF files themselves remain regular links on this static site.</div></noscript>
+</body>
+</html>
